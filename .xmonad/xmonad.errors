@@ -1,0 +1,3 @@
+
+xmonad.hs:4:65:
+    Module ‘XMonad.Hooks.ManageDocks’ does not export ‘docks’

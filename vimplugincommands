@@ -1,0 +1,34 @@
+Surround-Vim
+
+cs'" will replace ' with "
+ysiw] will surround the current word with []
+yss) will surround the current sentence with ()
+
+Vim-autoformat
+:Autoformat will indent the code
+
+Nerdcommenter
+,ci to toggle comment or uncomment
+:norm!3GV7G followed by ,ci to comment all lines from line 3 to 7
+
+YouCompleteMe
+:YcmRestartServer if YCM stops working
+:YcmForceCompileAndDiagnostics to compile the file and rebuild diagnostics
+:YcmDiags to see the diagnostics
+:YcmShowDetailedDiagnostic
+:YcmDebugInfo to see debug information
+:YcmCompleter command to use all the YCM features like GoTo, etc.
+
+FZF
+Ctrl T for command line files
+Ctrl R for previous commands
+** TAB for files and directories
+
+CTRLP
+Ctrl P to open fuzzy finder
+
+Vim Multiple Cursors
+Ctrl n to select locations and then c to change the value, I to insert in front, A to insert at end
+
+To see full path of a file
+,p
