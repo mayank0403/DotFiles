@@ -69,7 +69,9 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1 let g:syntastic_check_on_wq = 0 let g:ycm_global_ycm_extra_conf = "~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py"
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:ycm_global_ycm_extra_conf = "~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py"
 colorscheme mojave
 nnoremap <leader>p :echo expand('%:p')<CR>
 "use CLI commands while at vim
@@ -90,5 +92,5 @@ nnoremap <leader>fold :set foldmethod=syntax
 nnoremap <leader>fo zM
 "Unfold all functions in file
 nnoremap <leader>uf zR
-"Unfold at cursor
-nnoremap <leader>uff zo
+"Toggle fold at cursor
+nnoremap <leader>ff za
