@@ -35,7 +35,8 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'scrooloose/nerdtree'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'flazz/vim-colorschemes'
-
+Plugin 'mrnugget/vim-fzz'
+Plugin 'markonm/traces.vim'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -68,8 +69,26 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:ycm_global_ycm_extra_conf = "~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py"
-colorscheme molokai
+let g:syntastic_check_on_open = 1 let g:syntastic_check_on_wq = 0 let g:ycm_global_ycm_extra_conf = "~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py"
+colorscheme mojave
 nnoremap <leader>p :echo expand('%:p')<CR>
+"use CLI commands while at vim
+nnoremap <leader>j :!
+"Go to local definition of variable
+nnoremap <leader>dd gd 
+"Go to global defintion of variable/function
+nnoremap <leader>df gD
+"Find the first occurence of variable, then use n to navigate
+nnoremap <leader>da g*
+"Suspend vim. Then use fg on bash to return back
+nnoremap <leader>s <C-z>
+"Find a string in project
+nnoremap <leader>fi :!ag<Space>
+"init fold
+nnoremap <leader>fold :set foldmethod=syntax
+"Fold all functions in file
+nnoremap <leader>fo zM
+"Unfold all functions in file
+nnoremap <leader>uf zR
+"Unfold at cursor
+nnoremap <leader>uff zo
