@@ -95,9 +95,9 @@ nnoremap <leader>uf zR
 "Toggle fold at cursor
 nnoremap <leader>ff za
 "To select a word
-nnoremap <leader>ws viw
+nnoremap <leader>sw viw
 "To delete a word
-nnoremap <leader>wd diw
+nnoremap <leader>dw diw
 " EXTRA: Set a mark by m<alphabet>
 "Move to a mark. After space press `<alphabet>
 "Surround current word with something ysiw]
