@@ -24,7 +24,7 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 " different version somewhere else.
 " Plugin 'ascenator/L9', {'name': 'newL9'}
 Plugin 'Valloric/YouCompleteMe'
-Plugin 'scrooloose/syntastic'
+"Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-surround'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'Chiel92/vim-autoformat'
@@ -37,6 +37,9 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'mrnugget/vim-fzz'
 Plugin 'markonm/traces.vim'
+Plugin 'devjoe/vim-codequery'
+Plugin 'Shougo/unite.vim'
+"Plugin 'tpope/vim-dispatch'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -61,9 +64,9 @@ set laststatus=2
 autocmd vimenter * NERDTree
 nnoremap <Leader>w <C-w>w
 syntax on
-let g:syntastic_cpp_compiler='g++'
-let g:syntastic_cpp_compiler_options=' --std=c++11'
-let g:syntastic_cpp_check_header=1
+"let g:syntastic_cpp_compiler='g++'
+"let g:syntastic_cpp_compiler_options=' --std=c++11'
+"let g:syntastic_cpp_check_header=1
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
@@ -72,6 +75,7 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:ycm_global_ycm_extra_conf = "~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py"
+let g:ycm_show_diagnostics_ui = 0
 colorscheme mojave
 nnoremap <leader>p :echo expand('%:p')<CR>
 "use CLI commands while at vim
@@ -105,3 +109,9 @@ nnoremap <leader>dw diw
 " EXTRA: Replace ' ' with \" \" with cs'"
 " Select current line
 nnoremap <leader>sl V
+"Open codequery menu
+nnoremap <space>m :CodeQueryMenu Unite Full<CR>
+nnoremap <space>; :CodeQueryMenu Unite Magic<CR>
+  
+" Or enable typing (to search menu items) by default
+nnoremap <space>\ :CodeQueryMenu Unite Magic<CR>A
