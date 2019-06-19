@@ -112,6 +112,13 @@ nnoremap <leader>sl V
 "Open codequery menu
 nnoremap <space>m :CodeQueryMenu Unite Full<CR>
 nnoremap <space>; :CodeQueryMenu Unite Magic<CR>
-  
+"Once you find all the occurences of some query using any of
+"the above 2 commands, if you open the occurence directly, they will
+"window overwrite the existing cpp file. To avoid this, Go to the 
+"pane listing all occurences, command in :new and then go back to 
+"listing pane and now the occurence if opened, opens in the new
+"window created by :new command.
+
 " Or enable typing (to search menu items) by default
 nnoremap <space>\ :CodeQueryMenu Unite Magic<CR>A
+
