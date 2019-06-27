@@ -109,6 +109,10 @@ nnoremap <leader>dw diw
 " EXTRA: Replace ' ' with \" \" with cs'"
 " Select current line
 nnoremap <leader>sl V
+"Build Codequery DB for the project by
+"going to project root and typing in vim - 
+"CodeQueryMakeDB cpp (for python, use python)
+
 "Open codequery menu
 nnoremap <space>m :CodeQueryMenu Unite Full<CR>
 nnoremap <space>; :CodeQueryMenu Unite Magic<CR>
