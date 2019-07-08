@@ -10,4 +10,6 @@ This repository has the following dot files and shell scripts:
 
 5. installfish.sh: This will install and setup fish shell with a nice ocean theme.
 
+6. installxmonad.sh: This script will install xmonad on your linux environment with the default basic config.
+
 *NOTE: The vimrc has custom key bindings that suit my style of programming. Refer to vimrc for comments on how to use different plugins*
