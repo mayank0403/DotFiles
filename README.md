@@ -10,6 +10,6 @@ This repository has the following dot files and shell scripts:
 
 5. installfish.sh: This will install and setup fish shell with a nice ocean theme. Log out and login to set fish as default shell.
 
-6. installxmonad.sh: This script will install xmonad on your linux environment with the default basic config. Copy add_bg.desktop to ~/.config/autostart/ directory to autoload the wallpaper each time.
+6. installxmonad.sh: This script will install xmonad on your linux environment with the default basic config. Copy .xsession file to ~/ file directory to autoload the wallpaper each time.
 
 *NOTE: The vimrc has custom key bindings that suit my style of programming. Refer to vimrc for comments on how to use different plugins*
