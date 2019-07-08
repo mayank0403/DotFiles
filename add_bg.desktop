@@ -1,7 +1,0 @@
-[Desktop Entry]
-Type=Application
-Exec="~/DotFiles/add_bg.sh"
-Hidden=false
-NoDisplay=false
-X-GNOME-Autostart-enabled=true
-Name=Startup Script

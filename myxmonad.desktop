@@ -1,5 +1,5 @@
 [Desktop Entry]
 Name=XMonad Standalone
 Comment=Lightweight tiling window manager
-Exec=xmonad
+Exec=~/.xsession
 Type=XSession
