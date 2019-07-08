@@ -13,4 +13,4 @@ curl -L https://get.oh-my.fish | fish
 omf install ocean
 #on MSR machine, bob-the-fish used. It requires some fonts to be installed.
 
-
+chsh -s `which fish`
