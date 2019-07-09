@@ -129,3 +129,4 @@ nnoremap <space>\ :CodeQueryMenu Unite Magic<CR>A
 " For case insensitive search use - :set ic, where ic is ignore case and then use / to search.
 " To go back to case sensitive search use - :set noic
 
+" To go top of the current function use [m (recursively till you reach top) and ]m to go bottom.
