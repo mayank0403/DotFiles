@@ -126,3 +126,6 @@ nnoremap <space>; :CodeQueryMenu Unite Magic<CR>
 " Or enable typing (to search menu items) by default
 nnoremap <space>\ :CodeQueryMenu Unite Magic<CR>A
 
+" For case insensitive search use - :set ic, where ic is ignore case and then use / to search.
+" To go back to case sensitive search use - :set noic
+
