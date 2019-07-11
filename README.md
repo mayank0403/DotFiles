@@ -12,4 +12,13 @@ This repository has the following dot files and shell scripts:
 
 6. installxmonad.sh: This script will install xmonad on your linux environment with the default basic config. Copy .xsession file to ~/ directory to autoload the wallpaper each time.
 
+To use xmonad with xmobar (status bar):
+1. Install xmobar using `apt install xmobar`
+2. Go to xmonadplusbar directory
+3. Copy xmonad.hs to ~/.xmonad/ directory
+4. Copy .xmobarrc to ~/ directory
+5. Copy .xsession to ~/ dir
+6. Copy myxmonad.desktop to /usr/share/xsessions/ dir
+7. Restart to see effects
+
 *NOTE: The vimrc has custom key bindings that suit my style of programming. Refer to vimrc for comments on how to use different plugins*
