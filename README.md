@@ -22,3 +22,10 @@ To use xmonad with xmobar (status bar):
 7. Restart to see effects
 
 *NOTE: The vimrc has custom key bindings that suit my style of programming. Refer to vimrc for comments on how to use different plugins*
+
+Here is how my xmonad and vim configs look like.
+
+![vim config](https://github.com/mayank0403/DotFiles/blob/master/vim.png)
+![xmonad config](https://github.com/mayank0403/DotFiles/blob/master/xmonad.png)
+
+
