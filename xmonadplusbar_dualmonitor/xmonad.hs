@@ -23,7 +23,11 @@ main = do
           }
       , startupHook        = myStartupHook
       } `additionalKeys`
-      [ ((mod4Mask, xK_b), sendMessage ToggleStruts) ]
+      [ ((mod4Mask, xK_b), sendMessage ToggleStruts)
+      , ((mod4Mask, xK_l), spawn "slock")
+      , ((mod4Mask .|. shiftMask, xK_g), spawn "google-chrome")
+      , ((mod4Mask .|. shiftMask, xK_m), spawn "mendeleydesktop")
+      ]
 
 myPP = xmobarPP { ppOutput          = putStrLn
                 , ppCurrent         = xmobarColor "#336433" "" . wrap "[" "]"
@@ -36,9 +40,9 @@ myPP = xmobarPP { ppOutput          = putStrLn
 
 toggleStrutsKey XConfig { XMonad.modMask = modMask } = (modMask, xK_b)
 
-myStartupHook = setWMName "XMonad"
+myStartupHook = setWMName "LG3D"
              >> spawnHere "xrandr --output DP-1 --mode 1920x1080 --rotate right --pos 1920x-500  --output DVI-I-1 --mode 1920x1200 --rotate normal --pos 0x0"
-             >> spawnHere "feh --bg-scale /usr/share/backgrounds/warty-final-ubuntu.png"
+             >> spawnHere "feh --bg-fill /usr/share/backgrounds/warty-final-ubuntu.png"
 
 myworkspaces = [ "w1"
                , "w2"
