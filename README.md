@@ -19,7 +19,15 @@ To use xmonad with xmobar (status bar):
 4. Copy .xmobarrc to ~/ directory
 5. Copy .xsession to ~/ dir
 6. Copy myxmonad.desktop to /usr/share/xsessions/ dir
-7. Restart to see effects
+7. Run xmonad --recompile && xmonad --restart to see effects.
+
+For use with dual monitors [MAIN HORIZONTAL][SECONDARY VERTICAL]:
+1. Install xmobar.
+2. Go to xmonadplusbar_dualmonitor directory
+3. Copy xmonad.hs to ~/.xmonad/ directory
+4. Copy .xmobarrc to ~/ directory
+5. Copy myxmonad.desktop to /usr/share/xsessions/ dir
+6. Run xmonad --recompile && xmonad --restart to see effects.
 
 *NOTE: The vimrc has custom key bindings that suit my style of programming. Refer to vimrc for comments on how to use different plugins*
 
