@@ -12,14 +12,15 @@ main = do
     xmproc <- spawnPipe "xmobar"
     xmonad $ defaultConfig
       { modMask            = mod1Mask
+      , borderWidth        = 3
+      , normalBorderColor  = "black"
+      , focusedBorderColor = "orange"
       , manageHook         = manageDocks <+> manageHook defaultConfig
       , layoutHook         = avoidStruts  $ layoutHook defaultConfig
       -- this must be in this order, docksEventHook must be last
       , handleEventHook    = handleEventHook defaultConfig <+> docksEventHook
-      , logHook            = dynamicLogWithPP xmobarPP
+      , logHook            = dynamicLogWithPP myPP
           { ppOutput          = hPutStrLn xmproc
-          , ppTitle           = xmobarColor "darkgreen"  "" . shorten 20
-          , ppHiddenNoWindows = xmobarColor "grey" ""
           }
       , startupHook        = myStartupHook
       } `additionalKeys`
@@ -30,12 +31,12 @@ main = do
       ]
 
 myPP = xmobarPP { ppOutput          = putStrLn
-                , ppCurrent         = xmobarColor "#336433" "" . wrap "[" "]"
+                , ppCurrent         = xmobarColor "orange" "" . wrap "<[" "]>"
                 , ppHiddenNoWindows = xmobarColor "grey" ""
-                , ppTitle           = xmobarColor "darkgreen"  "" . shorten 20
-                , ppLayout          = shorten 6
-                , ppVisible         = wrap "(" ")"
-                , ppUrgent          = xmobarColor "red" "yellow"
+                , ppTitle           = xmobarColor "orange"  "" . shorten 30
+                , ppLayout          = xmobarColor "cyan" "" . myLayoutPrinter
+                , ppVisible         = xmobarColor "cyan" "" . wrap "(" ")"
+                , ppUrgent          = xmobarColor "red" "orange"
                 }
 
 toggleStrutsKey XConfig { XMonad.modMask = modMask } = (modMask, xK_b)
@@ -59,3 +60,9 @@ mymanager = composeAll
   [ className =? "gimp" --> doFloat
   , className =? "vlc"  --> doFloat
   ]
+
+myLayoutPrinter :: String -> String
+myLayoutPrinter "Full" = "[  ]"
+myLayoutPrinter "Tall" = "[|-]"
+myLayoutPrinter "Mirror Tall" = "[||]"
+myLayoutPrinter x = x
