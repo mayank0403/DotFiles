@@ -63,6 +63,6 @@ mymanager = composeAll
 
 myLayoutPrinter :: String -> String
 myLayoutPrinter "Full" = "[  ]"
-myLayoutPrinter "Tall" = "[|-]"
+myLayoutPrinter "Tall" = "[==]"
 myLayoutPrinter "Mirror Tall" = "[||]"
 myLayoutPrinter x = x
