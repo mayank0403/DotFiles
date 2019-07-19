@@ -28,6 +28,7 @@ For use with dual monitors [MAIN HORIZONTAL][SECONDARY VERTICAL]:
 4. Copy .xmobarrc to ~/ directory
 5. Copy myxmonad.desktop to /usr/share/xsessions/ dir
 6. Run xmonad --recompile && xmonad --restart to see effects.
+7. You might need to install utf chars using `apt install locales`
 
 *NOTE: The vimrc has custom key bindings that suit my style of programming. Refer to vimrc for comments on how to use different plugins*
 

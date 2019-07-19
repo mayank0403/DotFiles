@@ -1,9 +1,9 @@
 Config { 
 
    -- appearance
-     font =         "xft:Bitstream Vera Sans Mono:size=9:bold:antialias=true"
-   , bgColor =      "black"
-   , fgColor =      "#646464"
+     font =         "xft:Monospace:size=10:bold:antialias=true"
+   , bgColor =      "#33313b"
+   , fgColor =      "lightblue"
    , position =     Top
    , border =       BottomB
    , borderColor =  "#646464"
@@ -11,7 +11,7 @@ Config {
    -- layout
    , sepChar =  "%"   -- delineator between plugin names and straight text
    , alignSep = "}{"  -- separator between left-right alignment
-   , template = "%StdinReader% | %multicpu% | %coretemp% | %memory% }{ %dynnetwork% | %battery% | %date% || %kbd% "
+   , template = "%StdinReader%  ▍ %multicpu%  ▍ %coretemp%  ▍ %memory% }{ %volume%  ▍ %dynnetwork%  ▍ %battery%  ▍ %date%  ▍ %kbd% "
 
    -- general behavior
    , lowerOnStart =     True    -- send to bottom of window stack on start
@@ -38,52 +38,49 @@ Config {
    , commands = 
 
         -- weather monitor
-        [ Run Weather "RJTT" [ "--template", "<skyCondition> | <fc=#4682B4><tempC></fc>°C | <fc=#4682B4><rh></fc>% | <fc=#4682B4><pressure></fc>hPa"
+        [ Run Weather "KMIV" [ "--template", "<skyCondition> | <fc=#4682B4><tempC></fc>°C | <fc=#4682B4><rh></fc>% | <fc=#4682B4><pressure></fc>hPa"
                              ] 36000
 
         -- network activity monitor (dynamic interface resolution)
-        , Run DynNetwork     [ "--template" , "<dev>: <tx>kB/s|<rx>kB/s"
+        , Run DynNetwork     [ "--template" , "<fc=#00FFFF><dev></fc>: ↑ <fc=#00BFFF><tx></fc> kB/s ↓ <fc=#FFFF00><rx></fc> kB/s"
                              , "--Low"      , "1000"       -- units: B/s
                              , "--High"     , "5000"       -- units: B/s
-                             , "--low"      , "darkgreen"
-                             , "--normal"   , "darkorange"
-                             , "--high"     , "darkred"
                              ] 10
 
         -- cpu activity monitor
-        , Run MultiCpu       [ "--template" , "Cpu: <total0>%|<total1>%"
+        , Run MultiCpu       [ "--template" , "Cpu: <total0>% ▪ <total1>%"
                              , "--Low"      , "50"         -- units: %
                              , "--High"     , "85"         -- units: %
-                             , "--low"      , "darkgreen"
-                             , "--normal"   , "darkorange"
-                             , "--high"     , "darkred"
+                             , "--low"      , "cyan"
+                             , "--normal"   , "orange"
+                             , "--high"     , "red"
                              ] 10
 
         -- cpu core temperature monitor
-        , Run CoreTemp       [ "--template" , "Temp: <core0>°C|<core1>°C"
+        , Run CoreTemp       [ "--template" , "Temp: <core0>°C ▪ <core1>°C"
                              , "--Low"      , "70"        -- units: °C
                              , "--High"     , "80"        -- units: °C
-                             , "--low"      , "darkgreen"
-                             , "--normal"   , "darkorange"
-                             , "--high"     , "darkred"
+                             , "--low"      , "cyan"
+                             , "--normal"   , "orange"
+                             , "--high"     , "red"
                              ] 50
                           
         -- memory usage monitor
         , Run Memory         [ "--template" ,"Mem: <usedratio>%"
                              , "--Low"      , "20"        -- units: %
                              , "--High"     , "90"        -- units: %
-                             , "--low"      , "darkgreen"
-                             , "--normal"   , "darkorange"
-                             , "--high"     , "darkred"
+                             , "--low"      , "cyan"
+                             , "--normal"   , "orange"
+                             , "--high"     , "red"
                              ] 10
 
         -- battery monitor
         , Run Battery        [ "--template" , "Batt: <acstatus>"
                              , "--Low"      , "10"        -- units: %
                              , "--High"     , "80"        -- units: %
-                             , "--low"      , "darkred"
-                             , "--normal"   , "darkorange"
-                             , "--high"     , "darkgreen"
+                             , "--low"      , "red"
+                             , "--normal"   , "orange"
+                             , "--high"     , "cyan"
 
                              , "--" -- battery specific options
                                        -- discharging status
@@ -91,17 +88,18 @@ Config {
                                        -- AC "on" status
                                        , "-O"	, "<fc=#dAA520>Charging</fc>"
                                        -- charged status
-                                       , "-i"	, "<fc=#006000>Charged</fc>"
+                                       , "-i"	, "<fc=#FFA500>Charged</fc>"
                              ] 50
 
         -- time and date indicator 
         --   (%F = y-m-d date, %a = day of week, %T = h:m:s time)
-        , Run Date           "<fc=#ABABAB>%F (%a) %T</fc>" "date" 10
+        , Run Date          "%F (%a) <fc=#FFFF00>%T</fc>" "date" 10
 
         -- keyboard layout indicator
         , Run Kbd            [ ("us(dvorak)" , "<fc=#00008B>DV</fc>")
-                             , ("us"         , "<fc=#8B0000>US</fc>")
+                             , ("us"         , "<fc=#00FFFF>US</fc>")
                              ]
         , Run StdinReader
+        , Run Com "bash" ["-c", "OUTPUT=$(amixer sget Master); VOLUME=$(echo \"$OUTPUT\" | tail -n 1 | awk '{print substr($4, 2, length($4) - 3)}'); STATUS=$(echo \"$OUTPUT\" | tail -n 1 | awk '{print substr($6, 2, length($6) - 2)}'); if [[ $STATUS == on ]] && [[ $VOLUME != 0 ]]; then  if [[ $VOLUME -lt 30 ]]; then echo 'Vol: <fc=#2a6171>'$VOLUME'%</fc>'; elif [[ $VOLUME -lt 90 ]]; then echo 'Vol: <fc=#75cac3>'$VOLUME'%</fc>'; else echo 'Vol: <fc=#f34573>'$VOLUME'%</fc>'; fi; else echo 'Vol: <fc=#2a6171>Mute</fc>'; fi"] "volume"1
 	]
    }

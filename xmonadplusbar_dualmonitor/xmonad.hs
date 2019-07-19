@@ -31,11 +31,11 @@ main = do
       ]
 
 myPP = xmobarPP { ppOutput          = putStrLn
-                , ppCurrent         = xmobarColor "orange" "" . wrap "<[" "]>"
+                , ppCurrent         = xmobarColor "orange" "" . wrap "● " ""
                 , ppHiddenNoWindows = xmobarColor "grey" ""
-                , ppTitle           = xmobarColor "orange"  "" . shorten 30
+                , ppTitle           = xmobarColor "orange"  "" . shorten 40
                 , ppLayout          = xmobarColor "cyan" "" . myLayoutPrinter
-                , ppVisible         = xmobarColor "cyan" "" . wrap "(" ")"
+                , ppVisible         = xmobarColor "cyan" "" . wrap "○ " ""
                 , ppUrgent          = xmobarColor "red" "orange"
                 }
 
@@ -62,7 +62,7 @@ mymanager = composeAll
   ]
 
 myLayoutPrinter :: String -> String
-myLayoutPrinter "Full" = "[  ]"
-myLayoutPrinter "Tall" = "[==]"
-myLayoutPrinter "Mirror Tall" = "[||]"
+myLayoutPrinter "Full" = "[◼]"
+myLayoutPrinter "Tall" = "[▮]"
+myLayoutPrinter "Mirror Tall" = "[▬]"
 myLayoutPrinter x = x
