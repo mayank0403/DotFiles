@@ -130,3 +130,6 @@ nnoremap <space>\ :CodeQueryMenu Unite Magic<CR>A
 " To go back to case sensitive search use - :set noic
 
 " To go top of the current function use [m (recursively till you reach top) and ]m to go bottom.
+
+" To do a particular syntax highlighting for a file use - set syntax=python/cpp
+
