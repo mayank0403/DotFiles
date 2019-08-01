@@ -133,3 +133,5 @@ nnoremap <space>\ :CodeQueryMenu Unite Magic<CR>A
 
 " To do a particular syntax highlighting for a file use - set syntax=python/cpp
 
+" This will use python syntax highlighting for .mpc SPDZ files
+au BufNewFile,BufRead,BufReadPost *.mpc set syntax=python
