@@ -76,7 +76,7 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:ycm_global_ycm_extra_conf = "~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py"
 let g:ycm_show_diagnostics_ui = 0
-colorscheme mojave
+colorscheme dracula
 nnoremap <leader>p :echo expand('%:p')<CR>
 "use CLI commands while at vim
 nnoremap <leader>j :!
@@ -130,6 +130,9 @@ nnoremap <space>\ :CodeQueryMenu Unite Magic<CR>A
 " To go back to case sensitive search use - :set noic
 
 " To go top of the current function use [m (recursively till you reach top) and ]m to go bottom.
+" Use [[ to go to the first line of function above and ]] to go the first line
+" of function below. [[ works differently than [m. The latter is used to go up
+" by block while former to go up by function in cpp.
 
 " To do a particular syntax highlighting for a file use - set syntax=python/cpp
 
