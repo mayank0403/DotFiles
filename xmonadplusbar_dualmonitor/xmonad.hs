@@ -32,7 +32,6 @@ main = do
 
 myPP = xmobarPP { ppOutput          = putStrLn
                 , ppCurrent         = xmobarColor "orange" "" . wrap "● " ""
-                , ppHiddenNoWindows = xmobarColor "grey" ""
                 , ppTitle           = xmobarColor "orange"  "" . shorten 40
                 , ppLayout          = xmobarColor "cyan" "" . myLayoutPrinter
                 , ppVisible         = xmobarColor "cyan" "" . wrap "○ " ""
@@ -44,17 +43,6 @@ toggleStrutsKey XConfig { XMonad.modMask = modMask } = (modMask, xK_b)
 myStartupHook = setWMName "LG3D"
              >> spawnHere "xrandr --output DP-1 --mode 1920x1080 --rotate right --pos 1920x-500  --output DVI-I-1 --mode 1920x1200 --rotate normal --pos 0x0"
              >> spawnHere "feh --bg-fill /usr/share/backgrounds/warty-final-ubuntu.png"
-
-myworkspaces = [ "w1"
-               , "w2"
-               , "w3"
-               , "w4"
-               , "w5"
-               , "w6"
-               , "w7"
-               , "w8"
-               , "w9"
-               ]
 
 mymanager = composeAll
   [ className =? "gimp" --> doFloat
