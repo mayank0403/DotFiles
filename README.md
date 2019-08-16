@@ -12,6 +12,8 @@ This repository has the following dot files and shell scripts:
 
 6. installxmonad.sh: This script will install xmonad on your linux environment with the default basic config. Copy .xsession file to ~/ directory to autoload the wallpaper each time.
 
+7. config.fish: This is fish config file. Put this in ~/.config/fish/.
+
 To use xmonad with xmobar (status bar):
 1. Install xmobar using `apt install xmobar`
 2. Go to xmonadplusbar directory
