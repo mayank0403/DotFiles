@@ -141,3 +141,6 @@ au BufNewFile,BufRead,BufReadPost *.mpc set syntax=python
 
 " Remove  char coming from DOS/Windows style formatted file
 nnoremap <leader>rm :e ++ff=dos
+" If the above does not work, replace the char using :%s//
+
+
