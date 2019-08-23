@@ -11,7 +11,8 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 " The following are examples of different formats supported.
-" Keep Plugin commands between vundle#begin/end.  " plugin on GitHub repo
+" Keep Plugin commands between vundle#begin/end.  
+" plugin on GitHub repo
 Plugin 'tpope/vim-fugitive'
 " plugin from http://vim-scripts.org/vim/scripts.html
 " Plugin 'L9'
@@ -130,6 +131,9 @@ nnoremap <space>\ :CodeQueryMenu Unite Magic<CR>A
 
 " To go top of the current function use [m (recursively till you reach top) and ]m to go bottom.
 
+" Use [[ to go to the first line of function above and ]] to go the first line	
+" of function below. [[ works differently than [m. The latter is used to go up	
+" by block while former to go up by function in cpp.
 " To do a particular syntax highlighting for a file use - set syntax=python/cpp
 
 " This will use python syntax highlighting for .mpc SPDZ files
