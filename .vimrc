@@ -87,7 +87,7 @@ nnoremap <leader>df gD
 "Find the first occurence of variable, then use n to navigate
 nnoremap <leader>da g*
 "Suspend vim. Then use fg on bash to return back
-nnoremap <leader>s <C-z>
+nnoremap <leader>ss <C-z>
 "Find a string in project
 nnoremap <leader>fi :!ag<Space>
 "init fold
@@ -143,4 +143,4 @@ au BufNewFile,BufRead,BufReadPost *.mpc set syntax=python
 nnoremap <leader>rm :e ++ff=dos
 " If the above does not work, replace the char using :%s//
 
-
+" Move (shift the whole thing, no actual change in code) the line at cursor to the center of screen zz, to the top of screen zt and zb for the bottom
