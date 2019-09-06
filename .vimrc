@@ -144,3 +144,8 @@ nnoremap <leader>rm :e ++ff=dos
 " If the above does not work, replace the char using :%s//
 
 " Move (shift the whole thing, no actual change in code) the line at cursor to the center of screen zz, to the top of screen zt and zb for the bottom
+
+nnoremap <leader>se :/\v
+" Search for regex in file. c{5} matches exactly 5 c chars. .+ expects atleast
+" one char. *+ means 0 or more chars. <abc> for a word abc. hand(y|ful)
+" matched handy or handful.
