@@ -39,6 +39,7 @@ Plugin 'mrnugget/vim-fzz'
 Plugin 'markonm/traces.vim'
 Plugin 'devjoe/vim-codequery'
 Plugin 'Shougo/unite.vim'
+"Plugin 'liuchengxu/space-vim-dark'
 "Plugin 'tpope/vim-dispatch'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -76,7 +77,7 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:ycm_global_ycm_extra_conf = "~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py"
 let g:ycm_show_diagnostics_ui = 0
-colorscheme dracula
+colorscheme mustang
 nnoremap <leader>p :echo expand('%:p')<CR>
 "use CLI commands while at vim
 nnoremap <leader>j :!
@@ -139,11 +140,9 @@ nnoremap <space>\ :CodeQueryMenu Unite Magic<CR>A
 " This will use python syntax highlighting for .mpc SPDZ files
 au BufNewFile,BufRead,BufReadPost *.mpc set syntax=python
 
-" Remove 
- char coming from DOS/Windows style formatted file
+" Remove  char coming from DOS/Windows style formatted file
 nnoremap <leader>rm :e ++ff=dos
-" If the above does not work, replace the char using :%s/
-/
+" If the above does not work, replace the char using :%s//
 
 " Move (shift the whole thing, no actual change in code) the line at cursor to the center of screen zz, to the top of screen zt and zb for the bottom
 
@@ -151,5 +150,3 @@ nnoremap <leader>se :/\v
 " Search for regex in file. c{5} matches exactly 5 c chars. .+ expects atleast
 " one char. *+ means 0 or more chars. <abc> for a word abc. hand(y|ful)
 " matched handy or handful.
-
-" To resize windows in vim, enter mouse mode using :set mouse=a
