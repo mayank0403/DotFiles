@@ -150,3 +150,5 @@ nnoremap <leader>se :/\v
 " Search for regex in file. c{5} matches exactly 5 c chars. .+ expects atleast
 " one char. *+ means 0 or more chars. <abc> for a word abc. hand(y|ful)
 " matched handy or handful.
+
+" To resize vim windows use mouse mode by :set mouse=a
