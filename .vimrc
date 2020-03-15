@@ -158,7 +158,7 @@ nnoremap <leader>se :/\v
 " one char. *+ means 0 or more chars. <abc> for a word abc. hand(y|ful)
 " matched handy or handful.
 
-" To resize vim windows use mouse mode by :set mouse=aA
+" To resize vim windows use mouse mode by :set mouse=a
 "
 set backspace=indent,eol,start
 " The above command will let me delete chars not written by me on mac
