@@ -160,5 +160,12 @@ nnoremap <leader>se :/\v
 
 " To resize vim windows use mouse mode by :set mouse=a
 "
+set mouse=a
 set backspace=indent,eol,start
 " The above command will let me delete chars not written by me on mac
+"
+" Paste by replacing current word
+" cp stands for change paste
+nmap <silent> cp "_cw<C-R>"<Esc>
+
+
