@@ -166,6 +166,13 @@ set backspace=indent,eol,start
 "
 " Paste by replacing current word
 " cp stands for change paste
-nmap <silent> cp "_cw<C-R>"<Esc>
+nmap <silent> cp "_ciw<C-R>"<Esc>
 
+" Move left and right faster through panes
+nmap <silent> tj <C-w><Left>
+nmap <silent> tk <C-w>w
+
+" Move pane to left or right
+nmap <silent> ttj <C-w>r  
+nmap <silent> ttk <C-w>H
 
