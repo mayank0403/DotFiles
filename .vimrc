@@ -176,3 +176,5 @@ nmap <silent> tk <C-w>w
 nmap <silent> ttj <C-w>r  
 nmap <silent> ttk <C-w>H
 
+" Buffer mode in :term on vim
+" <C-w> Shift N
