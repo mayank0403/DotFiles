@@ -40,6 +40,7 @@ Plugin 'mrnugget/vim-fzz'
 Plugin 'markonm/traces.vim'
 Plugin 'devjoe/vim-codequery'
 Plugin 'Shougo/unite.vim'
+Plugin 'godlygeek/tabular'
 "Plugin 'liuchengxu/space-vim-dark'
 "Plugin 'tpope/vim-dispatch'
 " All of your Plugins must be added before the following line
