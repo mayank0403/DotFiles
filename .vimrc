@@ -180,3 +180,6 @@ nmap <silent> ttk <C-w>H
 
 " Buffer mode in :term on vim
 " <C-w> Shift N
+
+" Go back to previous location <C-o>
+" Go back to next location <C-i>
