@@ -183,3 +183,10 @@ nmap <silent> ttk <C-w>H
 
 " Go back to previous location <C-o>
 " Go back to next location <C-i>
+
+" Open netrw listing
+" More here: https://blog.stevenocchipinti.com/2016/12/28/using-netrw-instead-of-nerdtree-for-vim/
+" New file %, new directory d
+" To copy, mark file to copy with mf, then mark directory where to copy with
+" mt and then copy with mc
+nmap <silent> - :Explore
