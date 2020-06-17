@@ -190,3 +190,8 @@ nmap <silent> ttk <C-w>H
 " To copy, mark file to copy with mf, then mark directory where to copy with
 " mt and then copy with mc
 nmap <silent> - :Explore
+
+" jump to the previous function
+nnoremap <silent> [f :call search('^\s*\(\i\+\_[ \t\*]\+\)\+\i\+\_s*(\_[^)]*)\_s*{', "bw")<CR>
+" jump to the next function
+nnoremap <silent> ]f :call search('^\s*\(\i\+\_[ \t\*]\+\)\+\i\+\_s*(\_[^)]*)\_s*{', "w")<CR>
