@@ -42,6 +42,7 @@ Plugin 'devjoe/vim-codequery'
 Plugin 'Shougo/unite.vim'
 Plugin 'godlygeek/tabular'
 Plugin 'octol/vim-cpp-enhanced-highlight'
+Plugin 'editorconfig/editorconfig-vim'
 "Plugin 'liuchengxu/space-vim-dark'
 "Plugin 'tpope/vim-dispatch'
 " All of your Plugins must be added before the following line
@@ -73,9 +74,12 @@ syntax on
 "let g:syntastic_cpp_check_header=1
 
 " To set tab stop = 2.
-set sts=2
-set ts=2
-set sw=2
+"set sts=2
+"set ts=2
+"set sw=2
+
+" To set tab stop = 4.
+set expandtab tabstop=4 shiftwidth=4 softtabstop=4 
 
 "set statusline+=%#warningmsg#
 "set statusline+=%{SyntasticStatuslineFlag()}
