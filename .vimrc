@@ -199,3 +199,6 @@ nmap <silent> - :Explore
 nnoremap <silent> [f :call search('^\s*\(\i\+\_[ \t\*]\+\)\+\i\+\_s*(\_[^)]*)\_s*{', "bw")<CR>
 " jump to the next function
 nnoremap <silent> ]f :call search('^\s*\(\i\+\_[ \t\*]\+\)\+\i\+\_s*(\_[^)]*)\_s*{', "w")<CR>
+
+" Close NerdTree after file opened
+let NERDTreeQuitOnOpen=1
