@@ -182,6 +182,10 @@ nmap <silent> tk <C-w>w
 nmap <silent> ttj <C-w>r  
 nmap <silent> ttk <C-w>H
 
+" Increase/Decrease/Equalise window size - https://vi.stackexchange.com/questions/514/how-do-i-change-the-current-splits-width-and-height
+" 20<C-w>+ is increase size of horizontal window by 20 places
+" <C-w>= will equalize all window sizes
+
 " Buffer mode in :term on vim
 " <C-w> Shift N
 
