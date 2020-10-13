@@ -43,6 +43,7 @@ Plugin 'Shougo/unite.vim'
 Plugin 'godlygeek/tabular'
 Plugin 'octol/vim-cpp-enhanced-highlight'
 Plugin 'editorconfig/editorconfig-vim'
+Plugin 'vim-airline/vim-airline'
 "Plugin 'liuchengxu/space-vim-dark'
 "Plugin 'tpope/vim-dispatch'
 " All of your Plugins must be added before the following line
@@ -90,7 +91,7 @@ set expandtab tabstop=4 shiftwidth=4 softtabstop=4
 "let g:syntastic_check_on_wq = 0
 "let g:ycm_global_ycm_extra_conf = ~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py
 "let g:ycm_show_diagnostics_ui = 0
-colorscheme lucid
+colorscheme gruvbox
 nnoremap <leader>p :echo expand('%:p')<CR>
 "use CLI commands while at vim
 nnoremap <leader>j :!
