@@ -350,7 +350,8 @@ function __bobthefish_start_segment -S -d 'Start a prompt segment'
         case '*'
             # otherwise, draw the end of the previous segment and the start of the next
             set_color $__bobthefish_current_bg
-            echo -ns $right_black_arrow_glyph ' '
+            #echo -ns $right_black_arrow_glyph ' '
+            echo -ns ' '
             set_color $fg $argv
     end
 
