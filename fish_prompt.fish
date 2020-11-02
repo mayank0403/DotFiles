@@ -391,7 +391,8 @@ function __bobthefish_finish_segments -S -d 'Close open prompt segments'
     if [ -n "$__bobthefish_current_bg" ]
         set_color normal
         set_color $__bobthefish_current_bg
-        echo -ns $right_black_arrow_glyph ' '
+        #echo -ns $right_black_arrow_glyph ' '
+        echo -ns ' '
     end
 
     if [ "$theme_newline_cursor" = 'yes' ]
