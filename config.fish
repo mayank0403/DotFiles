@@ -3,7 +3,7 @@ set -g theme_project_dir_length 1
 set -g theme_nerd_fonts yes
 set -g theme_powerline_fonts no 
 
-set -g theme_color_scheme solarized-dark
+set -g theme_color_scheme gruvbox
 set -g theme_newline_cursor yes
 set -g theme_title_display_user yes
 set -g theme_title_display_process yes
