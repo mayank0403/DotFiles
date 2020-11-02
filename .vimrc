@@ -44,6 +44,12 @@ Plugin 'godlygeek/tabular'
 Plugin 'octol/vim-cpp-enhanced-highlight'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'vim-airline/vim-airline'
+Plugin 'tpope/vim-repeat'
+Plugin 'glts/vim-magnum'
+
+" Radical shows binary, octal, decimal.. representation under cursor. Show all: gA.
+" crd for change to decimal
+Plugin 'glts/vim-radical'
 "Plugin 'liuchengxu/space-vim-dark'
 "Plugin 'tpope/vim-dispatch'
 " All of your Plugins must be added before the following line
