@@ -29,3 +29,5 @@ source /Users/mayankrathee/.opam/opam-init/init.fish > /dev/null 2> /dev/null; o
 # iterm2 fish title
 # https://www.santoshsrinivas.com/setting-the-title-bar-in-an-iterm-using-a-fish-shell/
 # https://superuser.com/questions/83626/how-do-i-set-the-title-of-terminal-app-with-the-fish-shell/329277#329277
+
+status --is-interactive; and source (rbenv init -|psub)
