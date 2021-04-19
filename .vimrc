@@ -160,9 +160,11 @@ nnoremap <space>\ :CodeQueryMenu Unite Magic<CR>A
 " This will use python syntax highlighting for .mpc SPDZ files
 au BufNewFile,BufRead,BufReadPost *.mpc set syntax=python
 
-" Remove  char coming from DOS/Windows style formatted file
+" Remove 
+ char coming from DOS/Windows style formatted file
 nnoremap <leader>rm :e ++ff=dos
-" If the above does not work, replace the char using :%s//
+" If the above does not work, replace the char using :%s/
+/
 
 " Move (shift the whole thing, no actual change in code) the line at cursor to the center of screen zz, to the top of screen zt and zb for the bottom
 
@@ -213,3 +215,6 @@ nnoremap <silent> ]f :call search('^\s*\(\i\+\_[ \t\*]\+\)\+\i\+\_s*(\_[^)]*)\_s
 
 " Close NerdTree after file opened
 let NERDTreeQuitOnOpen=1
+
+
+" Surround selected text with () can be done using S(
